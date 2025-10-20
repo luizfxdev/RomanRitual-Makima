@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O Ritual de Makima - Provações em Algarismos Romanos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Vídeo de Background -->
+    <video id="background-video" autoplay muted loop playsinline>
+      <source src="assets/background.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Áudio de Tema -->
+    <audio id="theme-audio" loop>
+      <source src="assets/theme.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- Controles de Áudio -->
+    <div class="audio-controls">
+      <button id="play-audio" class="audio-btn" title="Tocar música">🎵</button>
+      <button id="pause-audio" class="audio-btn" title="Pausar música">⏸️</button>
+    </div>
+
+    <!-- Container Principal -->
+    <div class="container">
+      <h1 class="title">O Ritual de Makima</h1>
+      <p class="subtitle">Provações em Algarismos Romanos</p>
+
+      <!-- Número Gerado -->
+      <div class="number-display">
+        <span class="label">Número Invocado:</span>
+        <span id="generated-number" class="number">---</span>
+      </div>
+
+      <!-- Input para Entrada -->
+      <div class="input-group">
+        <label for="roman-input">Insira o algarismo romano correspondente:</label>
+        <input type="text" id="roman-input" placeholder="Ex: MMXXV" autocomplete="off" spellcheck="false" />
+        <span id="input-error" class="error-message"></span>
+      </div>
+
+      <!-- Botões de Ação -->
+      <div class="button-group">
+        <button id="convert-btn" class="ritual-btn" style="--clr: #ff4655">
+          <span>Converter</span>
+          <i></i>
+        </button>
+        <button id="return-btn" class="ritual-btn" style="--clr: #00ff55">
+          <span>Gerar Número</span>
+          <i></i>
+        </button>
+      </div>
+
+      <!-- Seção de Resultado -->
+      <div id="result-section" class="result-section">
+        <h2 class="result-title">Resultado</h2>
+        <div id="result-content" class="result-content">
+          <p class="awaiting">Aguardando sua resposta...</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
